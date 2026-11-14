@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>What changed: preiyalbhalla.com</title>
+<meta name="description" content="Where the phone and desktop versions of preiyalbhalla.com disagree, and the fix for each.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#161616">
+<link rel="icon" href="assets/avatar.avif">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css?v=11">
+<style>
+  .doc { max-width: 960px; margin: 0 auto; padding: 32px var(--gutter) 80px; }
+  .doc > header { display: flex; flex-direction: column; gap: 14px; margin-bottom: 40px; }
+  .doc h1 { font: 300 clamp(34px, 7vw, 52px)/1.12 var(--serif); text-wrap: balance; }
+  .doc .lede { color: var(--text-2); max-width: 62ch; font-size: 17px; line-height: 27px; }
+  .doc .lede a, .doc td a, .doc .note a { color: #fff; text-decoration: underline; text-underline-offset: 3px; }
+  .back { align-self: flex-start; }
+  .pair-block { margin-top: 56px; }
+  .pair-block h2 { font: 300 clamp(26px, 5vw, 34px)/1.2 var(--serif); text-wrap: balance; margin-bottom: 10px; }
+  .pair-block > p { color: var(--text-2); max-width: 62ch; margin-bottom: 20px; }
+  .pair { display: grid; grid-template-columns: repeat(2, minmax(0, 360px)); gap: 20px; align-items: start; }
+  .pair figure { background: var(--card); border-radius: var(--radius); padding: 14px; box-shadow: inset 0 0 0 1px var(--line); }
+  .pair img { width: 100%; height: auto; border-radius: 14px; }
+  .pair figcaption { font-size: 14px; line-height: 20px; color: var(--text-2); padding: 12px 4px 2px; }
+  .pair figcaption strong { color: #fff; font-weight: 600; display: block; }
+  .fixes { margin-top: 64px; }
+  .fixes h2 { font: 300 clamp(26px, 5vw, 34px)/1.2 var(--serif); margin-bottom: 16px; }
+  .table-wrap { overflow-x: auto; border-radius: var(--radius); box-shadow: inset 0 0 0 1px var(--line); background: var(--card); }
+  table { width: 100%; border-collapse: collapse; font-size: 15px; line-height: 22px; min-width: 640px; }
+  th, td { text-align: left; vertical-align: top; padding: 14px 16px; }
+  th { font-weight: 600; color: var(--text-2); font-size: 13px; }
+  tbody tr + tr td { border-top: 1px solid var(--line); }
+  td:first-child { color: #fff; font-weight: 500; width: 30%; }
+  td { color: var(--text-2); }
+  code { font: 500 13px/20px ui-monospace, SFMono-Regular, Menlo, monospace; background: rgba(255,255,255,0.08); padding: 2px 7px; border-radius: 6px; color: #fff; }
+  .note { margin-top: 28px; color: var(--text-3); font-size: 14px; line-height: 21px; max-width: 70ch; }
+  @media (max-width: 640px) {
+    table { min-width: 0; }
+    thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+    table, tbody, tr, td { display: block; width: auto; }
+    tr { padding: 16px; }
+    tbody tr + tr { border-top: 1px solid var(--line); }
+    tbody tr + tr td { border-top: 0; }
+    td { padding: 0; }
+    td:first-child { width: auto; margin-bottom: 8px; }
+    td:nth-child(2), td:nth-child(3) { font-size: 14px; line-height: 21px; }
+    td:nth-child(3) { margin-top: 6px; color: #fff; }
+    td:nth-child(2)::before, td:nth-child(3)::before { display: block; font-size: 12px; font-weight: 600; color: var(--text-3); }
+    td:nth-child(2)::before { content: "Now"; }
+    td:nth-child(3)::before { content: "Change"; }
+  }
+  @media (max-width: 560px) { .pair { gap: 10px; } .pair figure { padding: 8px; border-radius: 18px; } .pair figcaption { font-size: 13px; } }
+</style>
+</head>
+<body>
+<main class="doc">
+  <header>
+    <a class="email back" href="index.html">Back to the fixed page</a>
+    <h1>The phone version of your portfolio doesn't match desktop</h1>
+    <p class="lede">I opened <a href="https://www.preiyalbhalla.com/">preiyalbhalla.com</a> on desktop, tablet and phone. Desktop is the stronger version. On phones, two project cards show the wrong company, and a few details differ between sizes. The <a href="index.html">fixed page</a> keeps your visual design (colors, type, cards, hero) and resolves each one. The one layout change: your phone header, with your photo and name at the top, now applies on desktop too, and the contact links move out of the menu into icons beside them.</p>
+  </header>
+
+  <section class="pair-block" aria-labelledby="h-logos">
+    <h2 id="h-logos">Catchback and Twitch cards show Airtel on phones</h2>
+    <p>At 390px wide, the Catchback marketplace card and the Twitch clips card both carry the Airtel logo and Airtel app screens. It looks like the phone cards were duplicated from the Airtel card and only the text was changed.</p>
+    <div class="pair">
+      <figure>
+        <img src="evidence/before-phone-catchback-twitch.webp" alt="Live site at 390px: Catchback and Twitch cards showing the Airtel logo and Airtel screens" width="375" height="1650" loading="lazy">
+        <figcaption><strong>Live site, phone</strong>Airtel logo and screens on both cards</figcaption>
+      </figure>
+      <figure>
+        <img src="evidence/after-phone-catchback-twitch.webp" alt="Fixed page at 390px: Catchback and Twitch cards with their own logos and screens" width="375" height="1160" loading="lazy">
+        <figcaption><strong>Fixed, phone</strong>Same cards as desktop</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="pair-block" aria-labelledby="h-wrap">
+    <h2 id="h-wrap">The Airtel title breaks mid-word on phones</h2>
+    <p>The image column stays beside the text at phone width, so the title gets a narrow column and splits into "Reward / s &amp; / engage / ment". Stacking the image under the text on narrow screens fixes it.</p>
+    <div class="pair">
+      <figure>
+        <img src="evidence/before-phone-airtel.webp" alt="Live site at 390px: Airtel card title broken across words" width="375" height="560" loading="lazy">
+        <figcaption><strong>Live site, phone</strong>Title squeezed beside the images</figcaption>
+      </figure>
+      <figure>
+        <img src="evidence/after-phone-airtel.webp" alt="Fixed page at 390px: Airtel card title on three clean lines, images below" width="375" height="560" loading="lazy">
+        <figcaption><strong>Fixed, phone</strong>Images move under the title</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="pair-block" aria-labelledby="h-email">
+    <h2 id="h-email">The email button works differently on phone and desktop</h2>
+    <p>On desktop, Email copies the address and shows "Copied!", so a visitor still has to open their mail app and paste it. On phones, the menu's Email is already a real <code>mailto:</code> link (with a stray space after the colon). The fixed page does both on every screen: clicking opens the mail app and also copies the address, for people who use webmail.</p>
+    <div class="pair">
+      <figure>
+        <img src="evidence/before-phone-menu.webp" alt="Live site phone menu: Work, About, Linkedin, Email" width="390" height="844" loading="lazy">
+        <figcaption><strong>Live site, phone menu</strong>Email opens the mail app; no Resume link</figcaption>
+      </figure>
+      <figure>
+        <img src="evidence/before-desktop-catchback-twitch.webp" alt="Live site at 1440px: the same two cards with their correct logos" width="900" height="695" loading="lazy">
+        <figcaption><strong>Live site, desktop</strong>Correct logos here; Email only copies</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="fixes" aria-labelledby="h-fixes">
+    <h2 id="h-fixes">Everything that differs, and the change in Framer</h2>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th scope="col">What</th><th scope="col">Now</th><th scope="col">Change</th></tr></thead>
+        <tbody>
+          <tr><td>Reaching you on a phone</td><td>Email and LinkedIn sit inside the hamburger menu, so contacting you takes a tap to open it first</td><td>Show Email, Resume, LinkedIn and X as icons in the top bar on every size, one tap away.</td></tr>
+          <tr><td>Photo and name on desktop</td><td>Lower left of the screen, in a sidebar separate from the top nav</td><td>Use one header on every size: photo and name, with the contact icons beside them, in a bar that stays visible while scrolling.</td></tr>
+          <tr><td>Catchback and Twitch card images on phone</td><td>Airtel logo and screens</td><td>In the phone breakpoint, swap the logo and image fills on both cards to match desktop.</td></tr>
+          <tr><td>Email on desktop</td><td>Copies the address and doesn't link to mail (no <code>mailto:</code> on the page)</td><td>Link the button to <code>mailto:preiyalbhalla@gmail.com</code>; keep the copy if you like it.</td></tr>
+          <tr><td>Email link in the phone menu</td><td><code>mailto: preiyal...</code> (space after the colon)</td><td>Remove the space.</td></tr>
+          <tr><td>Job title</td><td>"Senior Product Designer" on desktop, "Product Designer" on tablet and phone</td><td>Use one title everywhere.</td></tr>
+          <tr><td>Navigation</td><td>Desktop: Home, About, Resume, plus a LinkedIn icon. Phone: Work, About, LinkedIn, Email</td><td>One set on every size. Resume is missing on phones, and the first item is "Home" on desktop but "Work" on phones (the fixed page uses "Work").</td></tr>
+          <tr><td>Greeting</td><td>"Hey there, I'm Preiyal" on desktop, "Hi, I'm Preiyal" on tablet and phone</td><td>Pick one. The fixed page shows your name in the header at every size, as your phone header does.</td></tr>
+          <tr><td>Airtel title on phone</td><td>Breaks mid-word</td><td>Phone variant of the card: stack the image under the text.</td></tr>
+          <tr><td>Resume</td><td>Opens a Google Drive tab, so visitors leave your site</td><td>View it in place in a dialog with a Download button (the fixed page embeds the same Drive file, nothing re-hosted).</td></tr>
+          <tr><td>Catchback card link</td><td>Opens the "Twitch-Product-Design" Figma deck, same as the Twitch card</td><td>Point it at the Catchback deck, or leave it unlinked until it's ready (what the fixed page does; the Twitch card keeps its deck link).</td></tr>
+          <tr><td>Airtel card tag</td><td>"Trading", the same tag as the Catchback card (likely copied)</td><td>Suggestion: "Rewards", from the card's own title.</td></tr>
+          <tr><td>"Coming soon" text</td><td><code>#5E5E5E</code> on near-black, about 2.9:1 contrast</td><td><code>#A3A3A3</code> passes 4.5:1 and still reads as secondary.</td></tr>
+          <tr><td>Twitch "Coming soon"</td><td>Shown on phone, hidden on desktop</td><td>Show it on both, or neither.</td></tr>
+          <tr><td>Headings and images</td><td>No <code>&lt;h1&gt;</code> (the headline lives in the video); all 11 images have no alt text; no meta description</td><td>Add the headline as hidden H1 text, alt text in each image's settings, and a site description (Framer has fields for both).</td></tr>
+          <tr><td>About page header</td><td>Uses the old sidebar layout (photo and name lower left, "Home / About / Resume" pills), so it does not match the fixed homepage header</td><td>Use the same top bar as Home on the About page: Work / About, photo and name, and the Email, Resume, LinkedIn and X icons. <a href="about.html">See the fixed About page</a>.</td></tr>
+          <tr><td>Current role on About</td><td>The intro says Catchback (YC26); a second line lower on the same page says Amazon</td><td>Keep one current role. The fixed About page uses Catchback, confirmed with the sender on 2026-11-14.</td></tr>
+          <tr><td>First project image weight</td><td>The fishing hint image is a 2.3 MB SVG wrapping a full-size PNG</td><td>Export it as WebP or AVIF at display size (the fixed page ships it at 33 KB, same picture).</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">Tested on 2026-11-13 in Chromium at 1440, 820 and 390px wide, scrolling the full page first so every card loads. Screenshots are from the live site that day. The fixed page uses your own images and videos from your Framer CDN and isn't indexed by search engines.</p>
+  </section>
+</main>
+</body>
+</html>
